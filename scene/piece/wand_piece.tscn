@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cchy0tcl01gib"]
+
+[ext_resource type="Texture2D" uid="uid://dow4n355o6ikd" path="res://asset/urizen_onebit_tileset__v2d0.png" id="1_a56vs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnv2w"]
+atlas = ExtResource("1_a56vs")
+region = Rect2(547, 170, 12, 12)
+
+[node name="WandPiece" type="Node2D" unique_id=1069610334]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=261669727]
+texture = SubResource("AtlasTexture_vnv2w")
+centered = false

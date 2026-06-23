@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bvuse2jfa1ceg"]
+
+[ext_resource type="Shader" uid="uid://dom6ndhnyy7uv" path="res://shader/crt.gdshader" id="1_xhto4"]
+[ext_resource type="Script" uid="uid://bji30bihs55yh" path="res://script/grid.gd" id="2_yaety"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_33cqm"]
+shader = ExtResource("1_xhto4")
+shader_parameter/brightness = 1.02
+shader_parameter/contrast = 1.08
+shader_parameter/saturation = 1.1
+shader_parameter/gamma = 1.05
+shader_parameter/curvature = 0.050000002375
+shader_parameter/corner_soften = 0.06
+shader_parameter/vignette = 0.38
+shader_parameter/scanline_strength = 0.2270000107825
+shader_parameter/scanline_density = 1.15
+shader_parameter/interlace_strength = 0.2
+shader_parameter/mask_strength = 0.22
+shader_parameter/mask_scale = 1.0
+shader_parameter/chroma_offset_px = 1.6
+shader_parameter/luma_smear_px = 2.2
+shader_parameter/jitter_px = 0.50000002375
+shader_parameter/wobble_px = 1.5
+shader_parameter/tape_noise = 0.22
+shader_parameter/tape_lines = 0.35
+shader_parameter/roll_speed = 0.1
+shader_parameter/roll_strength = 0.15
+shader_parameter/glow_strength = 0.25
+shader_parameter/glow_threshold = 0.65
+
+[node name="Game" type="Node2D" unique_id=674902185]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1261813275]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1860808541]
+material = SubResource("ShaderMaterial_33cqm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Board" type="ReferenceRect" parent="." unique_id=592063108]
+z_index = 2
+offset_left = 192.0
+offset_top = 192.0
+offset_right = 312.0
+offset_bottom = 312.0
+editor_only = false
+script = ExtResource("2_yaety")
+
+[node name="EnemyLocation" type="Marker2D" parent="." unique_id=491662371]
+position = Vector2(256, 64)

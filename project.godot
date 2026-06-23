@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="1-bit hero"
+run/main_scene="uid://5ny48gkmywv7"
+config/features=PackedStringArray("4.6", "Forward Plus")
+run/max_fps=120
+config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*uid://b6ydgvtw2kwlf"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
+[file_customization]
+
+folder_colors={
+"res://asset/": "green",
+"res://scene/": "orange",
+"res://scene/enemy/": "red",
+"res://script/": "yellow",
+"res://shader/": "purple"
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

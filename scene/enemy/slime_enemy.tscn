@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://f5l15m72lfsy"]
+
+[ext_resource type="Texture2D" uid="uid://dow4n355o6ikd" path="res://asset/urizen_onebit_tileset__v2d0.png" id="1_1qlag"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3744r"]
+atlas = ExtResource("1_1qlag")
+region = Rect2(1353, 547, 12, 12)
+
+[node name="slime_enemy" type="Node2D" unique_id=740113227]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1323857789]
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_3744r")
+centered = false
